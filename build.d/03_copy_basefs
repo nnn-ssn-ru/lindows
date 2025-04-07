@@ -1,3 +1,13 @@
 #!/bin/fish
 
+gcc -static -Wall -o src/basefs/init src/system-utils/init.c
+# Shell init script
+# #!/bin/sh
+# chvt 1
+# echo -e "\033[32mHello world!\033[0m"
+# sh
+# poweroff
+# sleep 2
+# restart
+
 cp -r src/basefs/* build/initramfs/
