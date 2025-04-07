@@ -1,0 +1,8 @@
+#!/bin/fish
+
+mkdir -p build/initramfs/{dev,proc,sys,usr/{bin,sbin,lib,share,include}}
+ln -s usr/bin build/initramfs/bin
+ln -s usr/sbin build/initramfs/sbin
+ln -s usr/lib build/initramfs/lib
+ln -s usr/lib build/initramfs/lib64
+ln -s lib build/initramfs/usr/lib64

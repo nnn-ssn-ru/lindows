@@ -1,0 +1,3 @@
+#!/bin/fish
+
+cp src/linux-6.13.9-bzImage.x86_64 build/isodir/boot/vmlinuz-linux

@@ -1,0 +1,5 @@
+#!/bin/fish
+
+mkdir -p build
+rm build -rf
+mkdir -p build

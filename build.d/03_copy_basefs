@@ -1,0 +1,3 @@
+#!/bin/fish
+
+cp -r src/basefs/* build/initramfs/

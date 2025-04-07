@@ -1,0 +1,7 @@
+#!/bin/fish
+
+cp src/busybox build/initramfs/bin/busybox
+
+for i in (build/initramfs/bin/busybox --list)
+    ln -sf "/bin/busybox" build/initramfs/bin/$i
+end

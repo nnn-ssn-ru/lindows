@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+import os
+import getpass
+import subprocess as sp
+from system import verify_password
+from system import local
+
+curret_lang = os.getenv("LANG", "en_US")
+local.set_language(curret_lang)
+
+print("\033[H\033[2J\033[3J", end="")
+
+while True:
+    try:
+        print(local.translate("os_description"))
+        login = input(local.translate("login_input"))
+        password = getpass.getpass(local.translate("password_input"))
+
+        if verify_password(login, password):
+            os.system(f"su {login}")
+        else:
+            print(local.translate("login_or_password_is_incorrect")+"\n")
+    except KeyboardInterrupt:
+        print()
+    except EOFError:
+        print()

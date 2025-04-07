@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set PATH="/bin/:/usr/bin/"
+
+mknod -m 666 /dev/random c 1 8
+mknod -m 666 /dev/urandom c 1 9
+
+reboot

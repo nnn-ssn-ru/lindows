@@ -1,0 +1,5 @@
+#!/bin/fish
+
+cd build/initramfs
+find . | cpio -ov -H newc | gzip > ../initramfs.img
+cd ../../

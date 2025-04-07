@@ -1,0 +1,5 @@
+#!/bin/fish
+
+mkdir -p build/isodir/boot/grub
+cp src/grub.cfg build/isodir/boot/grub/grub.cfg
+grub-mkrescue -o build/lindows.iso build/isodir

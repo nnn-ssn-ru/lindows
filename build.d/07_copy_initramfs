@@ -1,0 +1,3 @@
+#!/bin/fish
+
+cp build/initramfs.img build/isodir/boot/initramfs.img
